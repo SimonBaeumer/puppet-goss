@@ -1,0 +1,18 @@
+file:
+  /usr/bin/goss:
+    exists: true
+    mode: "0755"
+    size: 9837824
+    owner: root
+    group: root
+    filetype: file
+    contains: []
+package:
+  file:
+    installed: true
+    versions:
+    - "5.11"
+  wget:
+    installed: true
+    versions:
+    - "1.14"

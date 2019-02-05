@@ -1,0 +1,5 @@
+
+node 'puppetselfcontained' {
+  class {'goss':
+  }
+}

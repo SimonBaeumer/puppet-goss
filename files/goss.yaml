@@ -1,0 +1,18 @@
+file:
+  /usr/bin/goss:
+    exists: true
+    mode: "0755"
+    owner: root
+    group: root
+    filetype: file
+    contains: []
+    sha256: b1cd1135f6abcfbbf2626d9e09b4a6a28f22d34854d71dd3c5cad0fcc0f9c12a
+package:
+  file:
+    installed: true
+    versions:
+    - "5.11"
+  wget:
+    installed: true
+    versions:
+    - "1.14"
