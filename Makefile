@@ -18,6 +18,6 @@ lint:
 integration-centos:
 	$(info INFO: Starting build $@)
 	docker build -t puppet_goss_centos .
-	docker run -i -h puppetselfcontained.example -v $(CWD):/app -v $(CWD):$(PE_MODULE_PATH) puppet_goss_centos "/opt/puppetlabs/bin/puppet apply $(PE_MODULE_PATH)/dev.pp"
+	docker run -i -h puppetselfcontained.example -v $(CWD):/app -v $(CWD):$(PE_MODULE_PATH) puppet_goss_centos /opt/puppetlabs/bin/puppet apply $(PE_MODULE_PATH)/dev.pp
 	docker stop puppet_goss_centos || true
-	docker rm puppet_goss_centos
+	docker rmi puppet_goss_centos
