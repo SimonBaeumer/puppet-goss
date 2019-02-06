@@ -20,30 +20,14 @@ env:
   global:
     - BEAKER_PUPPET_COLLECTION=puppet6 PUPPET_GEM_VERSION="~> 6.0"
 
-#matrix:
-#  fast_finish: true
-#  include:
-#    -
-#      env: CHECK="syntax lint metadata_lint check:symlinks check:git_ignore check:dot_underscore check:test_file rubocop"
-#    -
-#      env: CHECK=parallel_spec
-#    -
-#      env: PUPPET_GEM_VERSION="~> 5.0" CHECK=parallel_spec
-#      rvm: 2.5
-
-#branches:
-#  only:
-#    - master
-#    - /^v\d/
-
-#notifications:
-#  email: false
-#deploy:
-#  provider: puppetforge
-#  user: puppet
-#  password:
-#    secure: ""
-#  on:
-#    tags: true
-#    all_branches: true
-#    condition: "$DEPLOY_TO_FORGE = yes"
+notifications:
+  email: false
+deploy:
+  provider: puppetforge
+  user: si_bae
+  password:
+    secure: "V8mgA//2bAt5y/d+xDIti49VtoSRF0/thPt1foY95jvSCK9PPgbm+b8lXuRPJ+maynRmSXBWOJ1Z0jIteb7xuMFPDCXGjZQfbtmQf/yfJoof/KTJvlYh8Qvu2E9qxthfdSdbx385MtLfLB2hvFQmQF28vIASWKEy2fK7ewNzMMwgVBiGWFIRutaVYb4DCHuQM9TeemWr+qXxoGNIG1hqMQ0NooiLbw1AilazLeYG/wT7NB+u7vM0FUZ0zrCcCvaq8DVyqGpz7Boqy+d0CHuP/zjI/GlL6fXWk2h1Alm1yx9PSAHTxOX4MhUpZC0Crf3LoXJK7P7C7QzJ+LGCH5ivH84Kpei6zpx/6dI29wyrBNvCuG4VwVLqssl7YY4aqgcXP6NOi2ByvUx/FtxptMExT6DgY0tw80qSuR57O4Um78e+5dWBfzQGfuzROQXpJ8kiPFEx7IlyiRxaEJAV08+exwIPLcb6pIXcsAZBaR0qXJBKJtUI26nqXVYUqThIXvT8mNaUhSQyBh3qr+Jd1HqOxqqpStHQw5inz6kPU2ETW0ehx2mwbsDBWD7JBbmCyl5iCAkXtKQMxhp0LcVRP+W0jlJ09+cVbdtGnz/CWGhzjsJH7f6XI0VSgKd9svU/Ctw7y9E90tFw30eEBmVhxWv5N+mPyvk4ivl3nt9Hl3pYHik="
+  on:
+    tags: true
+    all_branches: true
+    condition: "$DEPLOY_TO_FORGE = yes"
