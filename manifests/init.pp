@@ -17,7 +17,7 @@ class goss (
     overwrite       => true,
   }
 
-  -> exec { "Check if download succeded":
+  -> exec { 'Check if download succeded':
     command => "/usr/bin/file ${goss_path} | grep 'ELF 64-bit'"
   }
 
