@@ -1,4 +1,4 @@
-  define goss::remote_file($remote_location=undef, $mode='0644', $overwrite=false) {
+define goss::remote_file($remote_location=undef, $mode='0644', $overwrite=false) {
   if $overwrite == true {
     exec { "/bin/rm ${title} || true":
     }
