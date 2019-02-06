@@ -20,4 +20,5 @@ integration-centos:
 	docker build -t puppet_goss_centos .
 	docker run -i -h puppetselfcontained.example -v $(CWD):/app -v $(CWD):$(PE_MODULE_PATH) puppet_goss_centos /opt/puppetlabs/bin/puppet apply $(PE_MODULE_PATH)/dev.pp
 	docker stop puppet_goss_centos || true
-	docker rmi puppet_goss_centos
+	docker rm puppet_goss_centos || true
+	docker rmi puppet_goss_centos || true
