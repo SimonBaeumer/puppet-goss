@@ -2,9 +2,9 @@
   "name": "sibae-goss",
   "version": "0.1.0",
   "author": "Simon Bäumer",
-  "summary": "",
+  "summary": "Puppet module to install goss",
   "license": "Apache-2.0",
-  "source": "",
+  "source": "https://github.com/SimonBaeumer/goss",
   "dependencies": [
 
   ],
