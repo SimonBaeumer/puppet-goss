@@ -32,12 +32,6 @@ $ make tests
 
 ## Integration tests
 
-Note: not fully implemented at the moment
-
 ```
-$ make test-integration-centos
+$ make integration-centos
 ```
-
-## ToDo
-
- - Integration tests
