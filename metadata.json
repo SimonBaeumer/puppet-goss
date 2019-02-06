@@ -4,7 +4,7 @@
   "author": "Simon Bäumer",
   "summary": "Puppet module to install goss",
   "license": "Apache-2.0",
-  "source": "https://github.com/SimonBaeumer/goss",
+  "source": "https://github.com/SimonBaeumer/puppet-goss",
   "dependencies": [
 
   ],
