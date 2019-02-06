@@ -3,7 +3,7 @@ PE_MODULE_PATH = "/etc/puppetlabs/code/modules/goss"
 
 deps:
 	$(info INFO: Starting build $@)
-	rm Gemfile.lock
+	rm Gemfile.lock || true
 	gem update --system
 	bundle install --without system_tests --path vendor/bundle
 
