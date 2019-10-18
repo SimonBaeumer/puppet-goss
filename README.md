@@ -2,15 +2,27 @@
 
 # goss
 
-Puppet module to install `goss`
+Puppet module to install `goss`.
+
+## Usage
+
+```puppet
+  class {'goss':
+    version => 'v1.2.2', # default is latest
+    goss_path => '/usr/bin/goss', # path where the binary is saved
+    goss_conf_path => 'dev/goss_testing.yml', # default is /tmp/goss.yaml
+  }
+```
+
+Take a look at the [dev.pp](dev.pp) and the [development](#development) section for more information(.
 
 ## Development
 
 ```
-# Start a development environment
+# Start a development environment which will give you a shell inside a testing container
 $ ./docker-run.sh
 
-# Execute puppet inside the container
+# Execute puppet inside the container to apply the profile
 $ puppet apply dev.pp
 ```
 
