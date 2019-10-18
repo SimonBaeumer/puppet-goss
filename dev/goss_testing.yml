@@ -1,0 +1,5 @@
+command:
+  echo test:
+    stdout:
+      - test
+    exit-status: 0

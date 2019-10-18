@@ -10,7 +10,5 @@ describe 'goss' do
   it { is_expected.to contain_package('wget').with(ensure: 'installed') }
   it { is_expected.to contain_package('file').with(ensure: 'installed') }
 
-  it { is_expected.to contain_file('/tmp/goss.yaml').with(source: 'puppet:///modules/goss/goss.yaml') }
-
   it { is_expected.to contain_exec('/usr/bin/goss -g /tmp/goss.yaml validate') }
 end
